@@ -18,7 +18,7 @@ extentions = [
 extentions = [
     Extension(
         name=os.path.dirname(ext).replace("/", "."),
-        sources=[f"/kaggle/working/{ext}"],
+        sources=[f"/kaggle/working/moleculekit/{ext}"],
         include_dirs=[numpy.get_include()],
         language="c++",
         extra_compile_args=["-O3"],
@@ -31,14 +31,14 @@ extentions.append(
     Extension(
         "moleculekit.xtc",
         sources=[
-            "/kaggle/working/moleculekit/xtc_utils/src/xdrfile_xtc.c",
-            "/kaggle/working/moleculekit/xtc_utils/src/xdrfile.c",
-            "/kaggle/working/moleculekit/xtc_utils/src/xtc.c",
-            "/kaggle/working/moleculekit/xtc_utils/xtc.pyx",
+            "/kaggle/working/moleculekit/moleculekit/xtc_utils/src/xdrfile_xtc.c",
+            "/kaggle/working/moleculekit/moleculekit/xtc_utils/src/xdrfile.c",
+            "/kaggle/working/moleculekit/moleculekit/xtc_utils/src/xtc.c",
+            "/kaggle/working/moleculekit/moleculekit/xtc_utils/xtc.pyx",
         ],
         include_dirs=[
-            "/kaggle/working/moleculekit/xtc_utils/include/",
-            "/kaggle/working/moleculekit/xtc_utils/",
+            "/kaggle/working/moleculekit/moleculekit/xtc_utils/include/",
+            "/kaggle/working/moleculekit/moleculekit/xtc_utils/",
             numpy.get_include(),
         ],
         extra_compile_args=compiler_args,
@@ -49,12 +49,12 @@ extentions.append(
     Extension(
         "moleculekit.tmalign",
         sources=[
-            "/kaggle/working/moleculekit/tmalign/src/TMAlign.cpp",
-            "/kaggle/working/moleculekit/tmalign/tmalign_util.pyx",
+            "/kaggle/working/moleculekit/moleculekit/tmalign/src/TMAlign.cpp",
+            "/kaggle/working/moleculekit/moleculekit/tmalign/tmalign_util.pyx",
         ],
         include_dirs=[
-            "/kaggle/working/moleculekit/tmalign/include/",
-            "/kaggle/working/moleculekit/tmalign/",
+            "/kaggle/working/moleculekit/moleculekit/tmalign/include/",
+            "/kaggle/working/moleculekit/moleculekit/tmalign/",
             numpy.get_include(),
         ],
         extra_compile_args=compiler_args,
