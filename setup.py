@@ -31,14 +31,14 @@ extentions.append(
     Extension(
         "moleculekit.xtc",
         sources=[
-            "/kaggle/working/moleculekit/moleculekit/xtc_utils/src/xdrfile_xtc.c",
-            "/kaggle/working/moleculekit/moleculekit/xtc_utils/src/xdrfile.c",
-            "/kaggle/working/moleculekit/moleculekit/xtc_utils/src/xtc.c",
-            "/kaggle/working/moleculekit/moleculekit/xtc_utils/xtc.pyx",
+            "moleculekit/xtc_utils/src/xdrfile_xtc.c",
+            "moleculekit/xtc_utils/src/xdrfile.c",
+            "moleculekit/xtc_utils/src/xtc.c",
+            "moleculekit/xtc_utils/xtc.pyx",
         ],
         include_dirs=[
-            "/kaggle/working/moleculekit/moleculekit/xtc_utils/include/",
-            "/kaggle/working/moleculekit/moleculekit/xtc_utils/",
+            "moleculekit/xtc_utils/include/",
+            "moleculekit/xtc_utils/",
             numpy.get_include(),
         ],
         extra_compile_args=compiler_args,
@@ -49,12 +49,12 @@ extentions.append(
     Extension(
         "moleculekit.tmalign",
         sources=[
-            "/kaggle/working/moleculekit/moleculekit/tmalign/src/TMAlign.cpp",
-            "/kaggle/working/moleculekit/moleculekit/tmalign/tmalign_util.pyx",
+            "moleculekit/tmalign/src/TMAlign.cpp",
+            "moleculekit/tmalign/tmalign_util.pyx",
         ],
         include_dirs=[
-            "/kaggle/working/moleculekit/moleculekit/tmalign/include/",
-            "/kaggle/working/moleculekit/moleculekit/tmalign/",
+            "moleculekit/tmalign/include/",
+            "moleculekit/tmalign/",
             numpy.get_include(),
         ],
         extra_compile_args=compiler_args,
